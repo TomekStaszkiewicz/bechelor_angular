@@ -1,0 +1,11 @@
+
+<div class="main-div">
+    <button
+    *ngFor="let level of availableLevels"
+      class="btn-level"
+      value="{{ level}}"
+      (click)="onSelectLevel(level)"
+    >
+      {{ level }}
+    </button>
+  </div>

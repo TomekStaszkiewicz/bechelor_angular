@@ -1,0 +1,21 @@
+
+.main-div{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .btn-level {
+    width: 300px;
+    margin: 10px;
+    background-color: skyblue;
+    color: black;
+    font-size: 36px;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  

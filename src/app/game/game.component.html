@@ -1,0 +1,25 @@
+<div *ngIf="!gameFinished">
+    <h2>Comparisions: {{ clickCounter }}</h2>
+    <h2>Time: {{ timeDisplay }}</h2>
+  </div>
+  <div *ngIf="!gameFinished" class="game-container">
+     <div
+    *ngFor="let tile of tiles"
+    [style.backgroundImage]="
+        tile.isVisible || selectedTiles.includes(tile)
+          ? 'url(\'../../assets/gameImages/' + tile.src + '\')'
+          : 'url(\'../../assets/gameImages/background.jpeg\')'
+    "
+    width="100"
+    (click)="clickTile(tile)"
+    class="game-image"
+  ></div>
+  </div>
+<div *ngIf="gameFinished" class="modal-container">
+    <h2>Congratulations!</h2>
+    <h3>Time: {{ timeDisplay }}</h3>
+    <h3>Number of comparision: {{ clickCounter }}</h3>
+    <button (click)="restartGame()" class="restart-button">
+      Play again!
+    </button>
+  </div>
